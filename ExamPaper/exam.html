@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 id="exam-title"></h2>
+    <p>Time Remaining: <span id="timer"></span></p>
+    <a id="pdf-link" class="btn green" target="_blank">Download Question PDF</a>
+
+    <form
+      action="https://formspree.io/f/yourFormID"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="answerSheet" accept="image/*" required />
+      <input type="hidden" name="examCode" id="hidden-code" />
+      <button type="submit" class="btn blue">Submit Answer Sheet</button>
+    </form>
+
+    <div id="upload-status"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
